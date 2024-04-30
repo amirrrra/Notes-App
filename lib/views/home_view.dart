@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/widgets/floating_button_widget.dart';
 import 'package:notes_app/widgets/note_widget.dart';
 import 'package:notes_app/widgets/search_widget.dart';
 
@@ -7,8 +8,8 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Padding(
+    return  const Scaffold(
+      body:  Padding(
         padding: EdgeInsets.symmetric(
           horizontal: 25,
         ),
@@ -22,6 +23,9 @@ class HomeView extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingButtonWidget(),
     );
   }
 }
+
+
