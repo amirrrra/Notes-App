@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/widgets/note_widget.dart';
 import 'package:notes_app/widgets/search_widget.dart';
 
 class HomeView extends StatelessWidget {
@@ -17,6 +18,7 @@ class HomeView extends StatelessWidget {
               height: 50,
             ),
             SearchWidget(),
+            NoteWidget(),
           ],
         ),
       ),

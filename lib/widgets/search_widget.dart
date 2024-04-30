@@ -23,6 +23,7 @@ class SearchWidget extends StatelessWidget {
         decoration: InputDecoration(
           hintText: 'Search notes',
           hintStyle: TextStyle(
+            // fontFamily: 'Gilroy-Regular',
             color: grey8,
             fontSize: screenWidth / 22,
           ),
