@@ -3,9 +3,11 @@ import 'package:notes_app/utils/constants.dart';
 
 class ButtonWidget extends StatelessWidget {
   final void Function() onTap;
+  final bool isLoading;
   const ButtonWidget({
     super.key,
     required this.onTap,
+    this.isLoading = false,
   });
 
   @override
@@ -23,14 +25,22 @@ class ButtonWidget extends StatelessWidget {
             Radius.circular(20),
           ),
         ),
-        child: const Center(
-          child: Text(
-            'Save',
-            style: TextStyle(
-              fontSize: 20,
-              color: black,
-            ),
-          ),
+        child: Center(
+          child: isLoading
+              ? const SizedBox(
+                height: 24,
+                width: 24,
+                child: CircularProgressIndicator(
+                    color: black,strokeWidth: 3,
+                  ),
+              )
+              : const Text(
+                  'Save',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: black,
+                  ),
+                ),
         ),
       ),
     );
