@@ -5,17 +5,21 @@ class TextFieldWidget extends StatelessWidget {
   final String hint;
   final int maxLines;
   final double fontSize;
+  final void Function(String?)? onSaved;
 
   const TextFieldWidget({
     super.key,
     required this.hint,
     this.maxLines = 1,
     required this.fontSize,
+    this.onSaved,
   });
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      onSaved: onSaved,
+      validator: (value) => value?.isEmpty ?? true ? "Field is required" : null,
       cursorColor: cyan,
       maxLines: maxLines,
       decoration: InputDecoration(
