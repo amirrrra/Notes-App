@@ -7,8 +7,11 @@ class SearchWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
-    
+
     return Container(
+      margin: const EdgeInsets.only(
+        bottom: 16,
+      ),
       height: screenWidth / 7.5,
       decoration: const BoxDecoration(
         color: grey24,
@@ -23,7 +26,6 @@ class SearchWidget extends StatelessWidget {
         decoration: InputDecoration(
           hintText: 'Search notes',
           hintStyle: TextStyle(
-            // fontFamily: 'Gilroy-Regular',
             color: grey8,
             fontSize: screenWidth / 22,
           ),

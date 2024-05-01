@@ -11,7 +11,7 @@ class NoteWidget extends StatelessWidget {
 
     return Container(
       margin: const EdgeInsets.only(
-        top: 16,
+        bottom: 16,
       ),
       padding: const EdgeInsets.all(16),
       decoration: const BoxDecoration(
