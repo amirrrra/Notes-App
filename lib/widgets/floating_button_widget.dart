@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/constants.dart';
+import 'package:notes_app/utils/constants.dart';
 import 'package:notes_app/widgets/add_note_widget.dart';
 
 class FloatingButtonWidget extends StatelessWidget {
@@ -15,7 +15,6 @@ class FloatingButtonWidget extends StatelessWidget {
         backgroundColor: cyan,
         onPressed: () {
           showModalBottomSheet(
-            isScrollControlled: true,
             backgroundColor: grey24,
             context: context,
             builder: (context) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:notes_app/constants.dart';
+import 'package:notes_app/utils/constants.dart';
 
 class NoteWidget extends StatelessWidget {
   const NoteWidget({super.key});

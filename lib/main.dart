@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/constants.dart';
+import 'package:notes_app/utils/constants.dart';
 import 'package:notes_app/views/home_view.dart';
 
 void main() {
