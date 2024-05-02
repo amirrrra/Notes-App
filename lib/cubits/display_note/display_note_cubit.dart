@@ -8,14 +8,12 @@ part 'display_note_state.dart';
 
 class DisplayNoteCubit extends Cubit<DisplayNoteState> {
   DisplayNoteCubit() : super(DisplayNoteInitial());
+
+  List<NoteModel>? notesList;
+
   displayNote() {
-    try {
-      var notesBox = Hive.box<NoteModel>(kNotesBox);
-      // Iterable<E> => Collection of E
-      List<NoteModel> notesList = notesBox.values.toList();
-      emit(DisplayNoteSuccess(notesList: notesList));
-    } catch (e) {
-      emit(DisplayNoteFailure(errorMessage: e.toString()));
-    }
+    var notesBox = Hive.box<NoteModel>(kNotesBox);
+    notesList = notesBox.values.toList();       // Iterable<E> => Collection of E
+
   }
 }
