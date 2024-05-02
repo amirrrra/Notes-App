@@ -13,7 +13,11 @@ class DisplayNoteCubit extends Cubit<DisplayNoteState> {
 
   displayNote() {
     var notesBox = Hive.box<NoteModel>(kNotesBox);
-    notesList = notesBox.values.toList();       // Iterable<E> => Collection of E
 
+    // Iterable<E> => Collection of E
+    notesList = notesBox.values.toList();
+
+    // Once displayNote is called => DisplayNoteSuccess is emitted
+    emit(DisplayNoteSuccess());
   }
 }
