@@ -15,6 +15,7 @@ class FloatingButtonWidget extends StatelessWidget {
         backgroundColor: cyan,
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
             backgroundColor: grey24,
             context: context,
             builder: (context) {
