@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/utils/constants.dart';
 import 'package:notes_app/views/edit_note_view.dart';
 
 class NoteWidget extends StatelessWidget {
-  const NoteWidget({super.key});
+  final NoteModel noteModel;
+  const NoteWidget({
+    super.key,
+    required this.noteModel,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +26,9 @@ class NoteWidget extends StatelessWidget {
           bottom: 16,
         ),
         padding: const EdgeInsets.all(16),
-        decoration: const BoxDecoration(
-          color: grey24,
-          borderRadius: BorderRadius.all(
+        decoration: BoxDecoration(
+          color: Color(noteModel.color),
+          borderRadius: const BorderRadius.all(
             Radius.circular(20),
           ),
         ),
@@ -33,7 +38,7 @@ class NoteWidget extends StatelessWidget {
             ListTile(
               contentPadding: const EdgeInsets.all(0),
               title: Text(
-                'Study',
+                noteModel.title,
                 style: TextStyle(fontSize: screenWidth / 19),
               ),
               subtitle: Padding(
@@ -41,7 +46,7 @@ class NoteWidget extends StatelessWidget {
                   vertical: 12,
                 ),
                 child: Text(
-                  'I will study graphics subject within 3 hours from 7 to 10 pm',
+                  noteModel.description,
                   style: TextStyle(
                     color: grey8,
                     fontSize: screenWidth / 26,
@@ -55,7 +60,7 @@ class NoteWidget extends StatelessWidget {
               ),
             ),
             Text(
-              'May 21, 2024',
+              noteModel.date,
               style: TextStyle(
                 color: grey8,
                 fontSize: screenWidth / 26,
