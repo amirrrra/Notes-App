@@ -53,10 +53,15 @@ class NoteWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              trailing: Icon(
-                FontAwesomeIcons.trash,
+              trailing: IconButton(
                 color: white,
-                size: screenWidth / 18,
+                onPressed: () {
+                  noteModel.delete();
+                },
+                icon: Icon(
+                  FontAwesomeIcons.trash,
+                  size: screenWidth / 18,
+                ),
               ),
             ),
             Text(
