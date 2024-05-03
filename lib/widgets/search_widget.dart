@@ -20,6 +20,7 @@ class SearchWidget extends StatelessWidget {
         ),
       ),
       child: TextField(
+        cursorColor: babyBrown,
         style: TextStyle(
           fontSize: screenWidth / 20,
         ),

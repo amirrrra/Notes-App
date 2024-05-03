@@ -26,7 +26,7 @@ class TextFieldWidget extends StatelessWidget {
       onChanged: onChanged,
       onSaved: onSaved,
       validator: (value) => value?.isEmpty ?? true ? "Field is required" : null,
-      cursorColor: cyan,
+      cursorColor: babyBrown,
       maxLines: maxLines,
       decoration: InputDecoration(
         hintText: hint,

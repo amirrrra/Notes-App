@@ -12,7 +12,13 @@ class FloatingButtonWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(30),
       child: FloatingActionButton(
-        backgroundColor: cyan,
+        backgroundColor: babyBrown,
+        shape: const CircleBorder(),
+        child: const Icon(
+          Icons.add,
+          size: 35,
+          // color: white,
+        ),
         onPressed: () {
           showModalBottomSheet(
             isScrollControlled: true,
@@ -23,11 +29,6 @@ class FloatingButtonWidget extends StatelessWidget {
             },
           );
         },
-        shape: const CircleBorder(),
-        child: const Icon(
-          Icons.add,
-          size: 30,
-        ),
       ),
     );
   }

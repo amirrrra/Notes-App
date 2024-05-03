@@ -5,7 +5,7 @@ import 'package:notes_app/cubits/add_note/add_note_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/utils/constants.dart';
 import 'package:notes_app/widgets/button_widget.dart';
-import 'package:notes_app/widgets/color_list_widget.dart';
+import 'package:notes_app/widgets/add_note_colors_list_widget.dart';
 import 'package:notes_app/widgets/text_field_widget.dart';
 
 class AddNoteFormWidget extends StatefulWidget {
@@ -52,7 +52,7 @@ class _AddNoteFormWidgetState extends State<AddNoteFormWidget> {
               description = value;
             },
           ),
-          const ColorListWidget(),
+          const AddNoteColorsListWidget(),
           const SizedBox(
             height: 30,
           ),
@@ -68,7 +68,7 @@ class _AddNoteFormWidgetState extends State<AddNoteFormWidget> {
                       title: title!,
                       description: description!,
                       date: formattedDate,
-                      color: cyan.value,
+                      color: babyBrown.value,
                     );
                     BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
                   } else {

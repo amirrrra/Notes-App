@@ -31,7 +31,9 @@ class NoteWidget extends StatelessWidget {
         ),
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: Color(noteModel.color),
+          color: Color(
+            noteModel.color,
+          ),
           borderRadius: const BorderRadius.all(
             Radius.circular(20),
           ),
@@ -43,7 +45,10 @@ class NoteWidget extends StatelessWidget {
               contentPadding: const EdgeInsets.all(0),
               title: Text(
                 noteModel.title,
-                style: TextStyle(fontSize: screenWidth / 19),
+                style: TextStyle(
+                  fontSize: screenWidth / 19,
+                  color: black,
+                ),
               ),
               subtitle: Padding(
                 padding: const EdgeInsets.symmetric(

@@ -4,10 +4,10 @@ const grey24 = Color(0xff242424);
 const black = Color(0xff000000);
 const white = Color(0xffffffff);
 const grey8 = Color(0xff888888);
-const cyan = Color(0xff006064);
-const babyBlue = Color(0xff7BD3EA);
+const babyBrown = Color(0xffEAD7BB);
 
 const kNotesBox = 'NotesBox';
+
 const List<Color> colorsList = [
   Color(0xff7BD3EA),
   Color(0xffA1EEBD),
